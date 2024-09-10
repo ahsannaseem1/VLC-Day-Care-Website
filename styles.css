@@ -42,6 +42,11 @@ nav {
 .nav-items ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  height: 5vh;
 }
 
 .nav-items li {
@@ -321,6 +326,24 @@ nav {
   align-items: center;
   cursor: pointer;
   transition: transform 0.4s ease;
+  animation: scaleUp 0.8s linear;
+
+
+}
+.activity-card:nth-child(2){
+  animation-delay: 0.4s;
+}
+.activity-card:nth-child(3){
+  animation-delay: 0.8s;
+}
+.activity-card:nth-child(4){
+  animation-delay: 1.2s;
+}
+.activity-card:nth-child(5){
+  animation-delay: 1.6s;
+}
+.activity-card:nth-child(6){
+  animation-delay: 2s;
 }
 .activity-card:hover {
   box-shadow: 0 0 10px #e47a00;
@@ -344,6 +367,15 @@ nav {
   object-fit: cover;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+@keyframes scaleUp{
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 /*-------------------------- slider section ------------------------------*/
 
@@ -676,6 +708,7 @@ iframe {
     width: 200px;
     height: 100vh;
     padding-top: 80px;
+    justify-content: flex-start;
   }
 
   .nav-items ul li {
